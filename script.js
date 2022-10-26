@@ -171,7 +171,7 @@ Caso o usuário digite 2, ele poderá ver os itens cadastrados
 Caso o usuário digite 3, a aplicação deverá ser encerrada
 */
 
-let choice
+/* let choice
 let list = []
 let listItem
 while (choice != 3) {
@@ -193,4 +193,50 @@ while (choice != 3) {
       default:
         alert("Opção inválida! Tente novamente!")
   }
+} */
+
+/* ================================================================ */
+
+/* 
+Crie uma lista de pacientes
+
+Cada paciente tem que possuir 
+  nome
+  idade
+  peso
+  altura
+
+Escreva uma lista contendo o nome dos pacientes
+*/
+
+const pacients = [
+  {
+    pName: "Neto",
+    age: 20,
+    weight: 60,
+    height: 150
+  },
+  {
+    pName: "Marcos",
+    age: 44,
+    weight: 78,
+    height: 168
+  },
+  {
+    pName: "Sergio",
+    age: 28,
+    weight: 71,
+    height: 177
+  },
+]
+
+let imc
+for (let pacient of pacients) {
+  alert(`Paciente ${pacient.pName} possui o IMC de: ${Math.round(calcIMC(pacient.weight, pacient.height))}`)
 }
+
+function calcIMC(weight, height) {
+  return ((height * height) / weight).toFixed(2)
+}
+
+
